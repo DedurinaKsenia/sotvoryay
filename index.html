@@ -1,0 +1,520 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сотворяй — Цветочный магазин</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ДЕКОРАТИВНЫЕ ЭЛЕМЕНТЫ ФОНА -->
+<div class="decor decor-branch-1"><img src="https://dedurinaksenia.github.io/sotvoryay/%D0%92%D0%B5%D1%82%D0%BA%D0%B0.png" alt=""></div>
+<div class="decor decor-heart-1"><img src="https://dedurinaksenia.github.io/sotvoryay/%D0%A1%D0%B5%D1%80%D0%B4%D1%86%D0%B5%201.png" alt=""></div>
+<div class="decor decor-flower-1"><img src="https://dedurinaksenia.github.io/sotvoryay/%D0%A6%D0%B2%D0%B5%D1%82%D0%BE%D0%BA%201.png" alt=""></div>
+<div class="decor decor-heart-2"><img src="https://dedurinaksenia.github.io/sotvoryay/%D0%A1%D0%B5%D1%80%D0%B4%D1%86%D0%B5%202.png" alt=""></div>
+<div class="decor decor-branch-2"><img src="https://dedurinaksenia.github.io/sotvoryay/%D0%92%D0%B5%D1%82%D0%BA%D0%B0.png" alt=""></div>
+<div class="decor decor-heart-3"><img src="https://dedurinaksenia.github.io/sotvoryay/%D0%A1%D0%B5%D1%80%D0%B4%D1%86%D0%B5%203.png" alt=""></div>
+<div class="decor decor-flower-2"><img src="https://dedurinaksenia.github.io/sotvoryay/%D0%A6%D0%B2%D0%B5%D1%82%D0%BE%D0%BA%202.png" alt=""></div>
+<div class="decor decor-heart-4"><img src="https://dedurinaksenia.github.io/sotvoryay/%D0%A1%D0%B5%D1%80%D0%B4%D1%86%D0%B5%204.png" alt=""></div>
+
+<!-- КНОПКА ПОМОЩИ -->
+<button class="floating-helper" id="helperBtn" title="Помощь">?</button>
+
+<!-- ШАПКА -->
+<header>
+    <div class="container">
+        <div class="header-content">
+            <a href="#" class="logo">
+                <img src="https://dedurinaksenia.github.io/sotvoryay/%D0%9B%D0%BE%D0%B3%D0%BE%20%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%B0.png" alt="Сотворяй" class="logo-img">
+                <div class="logo-text">
+                    <h1>Сотворяй</h1>
+                    <p data-i18n="logoText">цветы, создающие настроение</p>
+                </div>
+            </a>
+
+            <nav>
+                <ul>
+                    <li><a href="#categories" data-i18n="navCategories">Категории</a></li>
+                    <li><a href="#products" data-i18n="navCatalog">Каталог</a></li>
+                    <li><a href="#constructor" data-i18n="navConstructor">Конструктор</a></li>
+                    <li><a href="#delivery" data-i18n="navDelivery">Доставка</a></li>
+                    <li><a href="#tracking" data-i18n="navTracking">Заказ</a></li>
+                    <li><a href="#about" data-i18n="navAbout">О нас</a></li>
+                    <li><a href="#contacts" data-i18n="navContacts">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="lang-switcher">
+                    <button type="button" class="lang-btn active" data-lang="ru">RU</button>
+                    <button type="button" class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <button type="button" class="login-btn" id="staffBtn" data-i18n="staffLogin">Для сотрудников</button>
+                <button type="button" class="cart" id="cartButton">
+                    <span data-i18n="cartWord">Корзина</span>
+                    <span class="cart-badge" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- ГЛАВНЫЙ БАННЕР -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-banner">
+            <img src="https://dedurinaksenia.github.io/sotvoryay/%D0%A8%D0%B0%D0%BF%D0%BA%D0%B0.png" alt="Сотворяй" class="hero-banner-img">
+        </div>
+
+        <div class="hero-actions">
+            <a href="#products" class="btn" data-i18n="heroBtn">Выбрать букет</a>
+            <a href="#constructor" class="btn btn-light" data-i18n="heroBuilderBtn">Собрать свой букет</a>
+        </div>
+    </div>
+</section>
+
+<!-- КАТЕГОРИИ -->
+<section id="categories" class="categories">
+    <div class="container">
+        <h2 class="section-title" data-i18n="categoriesTitle">Наши букеты</h2>
+        <div class="category-grid five-cols">
+            <button type="button" class="category-card filter-card" data-filter="mono">
+                <h3 data-i18n="catMono">Монобукеты</h3>
+                <p data-i18n="catMonoDesc">Один вид цветов — максимум элегантности</p>
+            </button>
+            <button type="button" class="category-card filter-card" data-filter="author">
+                <h3 data-i18n="catAuthor">Авторские букеты</h3>
+                <p data-i18n="catAuthorDesc">Уникальные композиции от флористов</p>
+            </button>
+            <button type="button" class="category-card filter-card" data-filter="box">
+                <h3 data-i18n="catBox">Цветы в коробке</h3>
+                <p data-i18n="catBoxDesc">Стильная подача в шляпных коробках</p>
+            </button>
+            <button type="button" class="category-card filter-card" data-filter="wedding">
+                <h3 data-i18n="catWedding">Букеты невесты</h3>
+                <p data-i18n="catWeddingDesc">Нежные букеты для особенного дня</p>
+            </button>
+            <button type="button" class="category-card filter-card" data-filter="dried">
+                <h3 data-i18n="catDried">Букеты из сухоцветов</h3>
+                <p data-i18n="catDriedDesc">Долговечная красота природы</p>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- КАТАЛОГ -->
+<section id="products" class="products">
+    <div class="container">
+        <h2 class="section-title" data-i18n="catalogTitle">Каталог</h2>
+        <div class="filters">
+            <input type="search" id="productSearch" data-i18n-placeholder="searchPlaceholder" placeholder="Поиск букета">
+            <select id="catalogFilter">
+                <option value="all" data-i18n="allCategories">Все категории</option>
+                <option value="mono" data-i18n="catMono">Монобукеты</option>
+                <option value="author" data-i18n="catAuthor">Авторские букеты</option>
+                <option value="box" data-i18n="catBox">Цветы в коробке</option>
+                <option value="wedding" data-i18n="catWedding">Букеты невесты</option>
+                <option value="dried" data-i18n="catDried">Букеты из сухоцветов</option>
+            </select>
+            <input type="number" id="minPrice" min="0" data-i18n-placeholder="minPricePlaceholder" placeholder="Цена от">
+            <input type="number" id="maxPrice" min="0" data-i18n-placeholder="maxPricePlaceholder" placeholder="Цена до">
+            <label class="check-line">
+                <input type="checkbox" id="stockOnly">
+                <span data-i18n="inStockOnly">Только в наличии</span>
+            </label>
+            <select id="sortSelect">
+                <option value="popular" data-i18n="sortPopular">По популярности</option>
+                <option value="priceAsc" data-i18n="sortPriceAsc">Сначала дешевле</option>
+                <option value="priceDesc" data-i18n="sortPriceDesc">Сначала дороже</option>
+                <option value="delivery" data-i18n="sortDelivery">По времени доставки</option>
+            </select>
+            <button type="button" class="btn-small" id="resetFiltersBtn" data-i18n="resetFilters">Сбросить</button>
+        </div>
+        <div class="catalog-info"><span id="resultsCount">0</span></div>
+        <div class="products-grid" id="productsGrid"></div>
+    </div>
+</section>
+
+<!-- КОНСТРУКТОР БУКЕТА -->
+<section id="constructor" class="constructor">
+    <div class="container">
+        <h2 class="section-title" data-i18n="constructorTitle">Конструктор букета</h2>
+        <p class="section-subtitle" data-i18n="constructorText">Выберите основу, размер, упаковку и дополнения.</p>
+        <div class="constructor-grid">
+            <div class="builder-card">
+                <div class="form-row">
+                    <label data-i18n="baseBouquet">Базовый букет</label>
+                    <select id="baseSelect"></select>
+                </div>
+                <div class="form-row">
+                    <label data-i18n="size">Размер</label>
+                    <select id="sizeSelect">
+                        <option value="" data-i18n="choose">Выберите</option>
+                        <option value="s" data-i18n="sizeSmall">S — компактный</option>
+                        <option value="m" data-i18n="sizeMedium">M — стандартный</option>
+                        <option value="l" data-i18n="sizeLarge">L — большой</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label data-i18n="package">Упаковка</label>
+                    <select id="wrapSelect">
+                        <option value="" data-i18n="choose">Выберите</option>
+                        <option value="craft" data-i18n="wrapCraft">Крафт</option>
+                        <option value="matte" data-i18n="wrapMatte">Матовая плёнка</option>
+                        <option value="premium" data-i18n="wrapPremium">Премиум-бумага</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label data-i18n="additional">Дополнительно</label>
+                    <div class="checkbox-grid">
+                        <label><input type="checkbox" class="builder-addon" value="rose" data-price="700" data-premium="1"><span data-i18n="addRose">Премиум-розы +700 ₽</span></label>
+                        <label><input type="checkbox" class="builder-addon" value="peony" data-price="900" data-premium="1"><span data-i18n="addPeony">Пионы +900 ₽</span></label>
+                        <label><input type="checkbox" class="builder-addon" value="tulip" data-price="500"><span data-i18n="addTulip">Тюльпаны +500 ₽</span></label>
+                        <label><input type="checkbox" class="builder-addon" value="green" data-price="250"><span data-i18n="addGreen">Зелень +250 ₽</span></label>
+                        <label><input type="checkbox" class="builder-addon" value="vase" data-price="1200"><span data-i18n="addVase">Ваза +1200 ₽</span></label>
+                        <label><input type="checkbox" class="builder-addon" value="sweets" data-price="800"><span data-i18n="addSweets">Сладости +800 ₽</span></label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label data-i18n="postcard">Текст открытки</label>
+                    <textarea id="cardText" rows="3" data-i18n-placeholder="cardPlaceholder" placeholder="Напишите пожелание"></textarea>
+                </div>
+                <div id="builderWarnings" class="builder-warnings"></div>
+                <div class="builder-total">
+                    <span data-i18n="builderTotalLabel">Стоимость:</span>
+                    <strong id="builderTotal">0 ₽</strong>
+                </div>
+                <div class="builder-actions">
+                    <button type="button" class="btn btn-light" id="saveDraftBtn" data-i18n="saveDraft">Сохранить черновик</button>
+                    <button type="button" class="btn" id="addCustomBtn" disabled data-i18n="addCustom">Добавить в корзину</button>
+                </div>
+            </div>
+            <div class="builder-preview">
+                <h3 data-i18n="constructorPreviewTitle">Ваш букет</h3>
+                <p id="builderPreview">—</p>
+                <strong id="builderPreviewPrice">0 ₽</strong>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ДОСТАВКА -->
+<section id="delivery" class="delivery">
+    <div class="container">
+        <h2 class="section-title" data-i18n="deliveryTitle">Доставка и самовывоз</h2>
+        <div class="info-grid">
+            <div class="info-card">
+                <h3 data-i18n="deliveryOrderTitle">Доставка</h3>
+                <div class="form-row">
+                    <label data-i18n="address">Адрес</label>
+                    <input type="text" id="deliveryAddress" data-i18n-placeholder="addressPlaceholder" placeholder="Введите адрес доставки">
+                </div>
+                <div class="form-row">
+                    <label data-i18n="date">Дата</label>
+                    <input type="date" id="deliveryDate">
+                </div>
+                <div class="form-row">
+                    <label data-i18n="slot">Временной слот</label>
+                    <select id="deliverySlot"></select>
+                </div>
+                <p class="note" data-i18n="paymentMethods">Оплата картой, СБП, электронным кошельком или наличными.</p>
+            </div>
+            <div class="info-card">
+                <h3 data-i18n="pickupTitle">Самовывоз</h3>
+                <p data-i18n="pickupText">Москва, ул. Цветочная, 10.</p>
+                <p data-i18n="pickupSchedule">Ежедневно 09:00 — 21:00.</p>
+                <p class="note" data-i18n="pickupNote">После оплаты вы получите код получения на Email.</p>
+            </div>
+            <div class="info-card">
+                <h3 data-i18n="mapTitle">Зона доставки</h3>
+                <div class="map-placeholder"><p data-i18n="mapText">Москва и Московская область</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ОТСЛЕЖИВАНИЕ ЗАКАЗА -->
+<section id="tracking" class="tracking">
+    <div class="container">
+        <h2 class="section-title" data-i18n="trackingTitle">Отслеживание заказа</h2>
+        <div class="tracking-card">
+            <h3 data-i18n="orderStatusTitle">Статус заказа</h3>
+            <div id="orderStatusBox"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ПРОГРАММА ЛОЯЛЬНОСТИ -->
+<section class="loyalty">
+    <div class="container">
+        <h2 class="section-title" data-i18n="loyaltyTitle">Программа лояльности</h2>
+        <div class="features-grid">
+            <div class="feature-item carded">
+                <h4 data-i18n="loyaltyPoints">Баллы за каждый заказ</h4>
+                <p data-i18n="loyaltyPointsText">До 5% кэшбэка бонусами.</p>
+            </div>
+            <div class="feature-item carded">
+                <h4 data-i18n="loyaltyDates">Напоминания о датах</h4>
+                <p data-i18n="loyaltyDatesText">Дни рождения, годовщины и праздники.</p>
+            </div>
+            <div class="feature-item carded">
+                <h4 data-i18n="loyaltyDiscounts">Персональные скидки</h4>
+                <p data-i18n="loyaltyDiscountsText">Предложения на основе истории заказов.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- КОРПОРАТИВНЫЙ РАЗДЕЛ -->
+<section class="corporate">
+    <div class="container">
+        <h2 class="section-title" data-i18n="corporateTitle">Корпоративным клиентам</h2>
+        <form class="corporate-form" id="corporateForm">
+            <input type="text" data-i18n-placeholder="companyPlaceholder" placeholder="Название компании" required>
+            <input type="text" data-i18n-placeholder="innPlaceholder" placeholder="ИНН" required>
+            <input type="email" placeholder="Email" required>
+            <textarea rows="3" data-i18n-placeholder="corporateCommentPlaceholder" placeholder="Комментарий к заявке"></textarea>
+            <button type="submit" class="btn" data-i18n="corporateBtn">Отправить заявку</button>
+        </form>
+    </div>
+</section>
+
+<!-- О НАС -->
+<section id="about" class="about">
+    <div class="container">
+        <h2 class="section-title" data-i18n="aboutTitle">О нас</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p data-i18n="aboutP1">«Сотворяй» — это больше, чем просто цветочный магазин. Мы создаём настроение и помогаем дарить эмоции с 2018 года.</p>
+                <p data-i18n="aboutP2">Наши флористы работают только со свежими цветами и вкладывают душу в каждую композицию.</p>
+            </div>
+            <div class="about-stats">
+                <div class="stat"><div class="stat-number">8+</div><div class="stat-text" data-i18n="years">лет на рынке</div></div>
+                <div class="stat"><div class="stat-number">50k+</div><div class="stat-text" data-i18n="clients">довольных клиентов</div></div>
+                <div class="stat"><div class="stat-number">24/7</div><div class="stat-text" data-i18n="support">поддержка</div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ -->
+<section class="special-offer">
+    <div class="container">
+        <h3 data-i18n="offerTitle">Специальное предложение</h3>
+        <p data-i18n="offerText">При первом заказе скидка 15% по промокоду START15</p>
+        <div class="offer-timer">
+            <div class="timer-item"><div class="timer-number" id="hours">23</div><div class="timer-text" data-i18n="hours">часа</div></div>
+            <div class="timer-item"><div class="timer-number" id="minutes">35</div><div class="timer-text" data-i18n="minutes">минут</div></div>
+            <div class="timer-item"><div class="timer-number" id="seconds">23</div><div class="timer-text" data-i18n="seconds">секунд</div></div>
+        </div>
+        <a href="#products" class="btn" data-i18n="offerBtn">Воспользоваться</a>
+    </div>
+</section>
+
+<!-- ПРЕИМУЩЕСТВА -->
+<section class="features">
+    <div class="container">
+        <h2 class="section-title" data-i18n="featuresTitle">Почему выбирают нас</h2>
+        <div class="features-grid">
+            <div class="feature-item carded"><h4 data-i18n="featDeliveryTitle">Бесплатная доставка</h4><p data-i18n="featDeliveryText">От 3000 ₽ по городу</p></div>
+            <div class="feature-item carded"><h4 data-i18n="featFreshTitle">Свежесть 100%</h4><p data-i18n="featFreshText">Цветы от проверенных поставщиков</p></div>
+            <div class="feature-item carded"><h4 data-i18n="featFloristsTitle">Топ-флористы</h4><p data-i18n="featFloristsText">Авторские композиции</p></div>
+            <div class="feature-item carded"><h4 data-i18n="featPaymentTitle">Удобная оплата</h4><p data-i18n="featPaymentText">Карта, СБП, кошелёк, наличные</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- РАССЫЛКА -->
+<section class="newsletter">
+    <div class="container">
+        <h3 data-i18n="newsletterTitle">Подпишитесь на новости</h3>
+        <p data-i18n="newsletterText">Промокоды, идеи для букетов и новинки.</p>
+        <form class="subscribe-form" id="subscribeForm">
+            <input type="email" id="subEmail" data-i18n-placeholder="emailPlaceholder" placeholder="Введите ваш email" required>
+            <button type="submit" data-i18n="subscribeBtn">Подписаться</button>
+        </form>
+    </div>
+</section>
+
+<!-- РАЗДЕЛ ДЛЯ СОТРУДНИКОВ -->
+<div id="staffArea" class="hidden">
+    <section class="admin-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="adminTitle">Панель сотрудников</h2>
+            <div class="role-tabs">
+                <button type="button" class="role-tab active" data-panel="adminPanel" data-i18n="tabAdmin">Администратор</button>
+                <button type="button" class="role-tab" data-panel="floristPanel" data-i18n="tabFlorist">Флорист</button>
+                <button type="button" class="role-tab" data-panel="courierPanel" data-i18n="tabCourier">Курьер</button>
+                <button type="button" class="role-tab" data-panel="managerPanel" data-i18n="tabManager">Менеджер</button>
+            </div>
+            <div class="role-panel active" id="adminPanel">
+                <div class="dashboard-grid">
+                    <div class="dash-card"><span data-i18n="dashOrders">Заказы сегодня</span><strong>86</strong></div>
+                    <div class="dash-card"><span data-i18n="dashRevenue">Выручка</span><strong>412 500 ₽</strong></div>
+                    <div class="dash-card"><span data-i18n="dashAverage">Средний чек</span><strong>4 790 ₽</strong></div>
+                    <div class="dash-card"><span data-i18n="dashConversion">Конверсия</span><strong>34%</strong></div>
+                </div>
+                <div class="admin-grid">
+                    <div class="admin-card" data-i18n="adminCatalog">Каталог, остатки, цены, категории, акции</div>
+                    <div class="admin-card" data-i18n="adminDelivery">Слоты, зоны доставки, тарифы, курьеры</div>
+                    <div class="admin-card" data-i18n="adminCrm">CRM-карточки клиентов и история взаимодействий</div>
+                    <div class="admin-card" data-i18n="adminAnalytics">Аналитика: выручка, средний чек, KPI</div>
+                </div>
+            </div>
+            <div class="role-panel" id="floristPanel">
+                <h3 data-i18n="floristPanelTitle">Панель флориста</h3>
+                <ul class="process-list">
+                    <li>#1024 — Пионовая нежность — сборка начата</li>
+                    <li>#1025 — Белая орхидея — проверка остатков</li>
+                    <li>#1026 — Лавандовое поле — готов к выдаче</li>
+                </ul>
+            </div>
+            <div class="role-panel" id="courierPanel">
+                <h3 data-i18n="courierPanelTitle">Панель курьера</h3>
+                <ul class="process-list">
+                    <li>Маршрут: Цветочная, 10 — Тверская, 15</li>
+                    <li>Статус: в пути</li>
+                    <li>Фотоотчёт после передачи заказа</li>
+                </ul>
+            </div>
+            <div class="role-panel" id="managerPanel">
+                <h3 data-i18n="managerPanelTitle">Панель менеджера</h3>
+                <ul class="process-list">
+                    <li>Новое обращение от клиента</li>
+                    <li>Возврат по заказу #1008 — проверка</li>
+                    <li>Запланирована рассылка к празднику</li>
+                </ul>
+            </div>
+            <div class="staff-exit">
+                <button type="button" class="btn-small" id="staffLogoutBtn" data-i18n="staffLogout">Выйти из режима сотрудника</button>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- ПОДВАЛ -->
+<footer id="contacts">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Сотворяй</h4>
+                <p data-i18n="footerDesc">Дарим радость и красоту с 2018 года. Свежие цветы, бережная доставка и индивидуальный подход.</p>
+            </div>
+            <div class="footer-section">
+                <h4 data-i18n="footerCategories">Категории</h4>
+                <ul>
+                    <li><a href="#products" data-filter="mono" data-i18n="catMono">Монобукеты</a></li>
+                    <li><a href="#products" data-filter="author" data-i18n="catAuthor">Авторские букеты</a></li>
+                    <li><a href="#products" data-filter="box" data-i18n="catBox">Цветы в коробке</a></li>
+                    <li><a href="#products" data-filter="wedding" data-i18n="catWedding">Букеты невесты</a></li>
+                    <li><a href="#products" data-filter="dried" data-i18n="catDried">Букеты из сухоцветов</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 data-i18n="footerInfo">Информация</h4>
+                <ul>
+                    <li><a href="#about" data-i18n="aboutTitle">О нас</a></li>
+                    <li><a href="#delivery" data-i18n="navDelivery">Доставка</a></li>
+                    <li><a href="#tracking" data-i18n="navTracking">Заказ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 data-i18n="footerContacts">Контакты</h4>
+                <ul>
+                    <li data-i18n="footerAddress">Москва, ул. Цветочная, 10</li>
+                    <li>8 (800) 555-88-99</li>
+                    <li>info@sotvoryay.ru</li>
+                    <li data-i18n="footerHours">Ежедневно 09:00 — 21:00</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright"><p data-i18n="footerRights">Сотворяй — все права защищены © 2026</p></div>
+    </div>
+</footer>
+
+<!-- КОРЗИНА -->
+<div id="cartModal" class="cart-modal">
+    <div class="cart-content">
+        <div class="modal-header">
+            <span data-i18n="cartTitle">Ваша корзина</span>
+            <button type="button" class="modal-close" id="closeCartBtn">&times;</button>
+        </div>
+        <ul class="cart-items-list" id="cartList"></ul>
+        <div class="promo-row">
+            <input type="text" id="promoInput" data-i18n-placeholder="promoPlaceholder" placeholder="Промокод">
+            <button type="button" class="btn-small" id="applyPromoBtn" data-i18n="applyPromo">Применить</button>
+        </div>
+        <div class="promo-row">
+            <input type="number" id="bonusInput" min="0" data-i18n-placeholder="bonusPlaceholder" placeholder="Списать бонусы">
+        </div>
+        <div id="cartTotalPrice" class="cart-total">Итого: 0 ₽</div>
+        <button type="button" class="checkout-btn" id="checkoutBtn" data-i18n="checkoutBtn">Оформить заказ</button>
+    </div>
+</div>
+
+<!-- ОФОРМЛЕНИЕ ЗАКАЗА -->
+<div id="checkoutModal" class="modal">
+    <div class="modal-content large">
+        <div class="modal-header">
+            <span data-i18n="checkoutTitle">Оформление заказа</span>
+            <button type="button" class="modal-close" id="closeCheckoutBtn">&times;</button>
+        </div>
+        <form id="checkoutForm" class="checkout-form">
+            <input type="text" id="customerName" data-i18n-placeholder="customerNamePlaceholder" placeholder="Ваше имя" required>
+            <input type="tel" id="customerPhone" data-i18n-placeholder="customerPhonePlaceholder" placeholder="Телефон" required>
+            <select id="receiveMethod">
+                <option value="delivery" data-i18n="methodDelivery">Доставка</option>
+                <option value="pickup" data-i18n="methodPickup">Самовывоз</option>
+            </select>
+            <input type="text" id="checkoutAddress" data-i18n-placeholder="addressPlaceholder" placeholder="Введите адрес доставки">
+            <input type="date" id="checkoutDate" required>
+            <select id="checkoutSlot" required></select>
+            <select id="paymentMethod">
+                <option value="card" data-i18n="paymentCard">Банковская карта</option>
+                <option value="sbp" data-i18n="paymentSbp">СБП</option>
+                <option value="wallet" data-i18n="paymentWallet">Электронный кошелёк</option>
+                <option value="cash" data-i18n="paymentCash">Наличными при получении</option>
+            </select>
+            <label class="consent">
+                <input type="checkbox" required>
+                <span data-i18n="consentText">Я согласен на обработку персональных данных</span>
+            </label>
+            <div class="checkout-summary" id="checkoutSummary"></div>
+            <button type="submit" class="btn" data-i18n="placeOrder">Оплатить и оформить заказ</button>
+        </form>
+    </div>
+</div>
+
+<!-- ВХОД ДЛЯ СОТРУДНИКОВ -->
+<div id="staffModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span data-i18n="staffTitle">Вход для сотрудников</span>
+            <button type="button" class="modal-close" id="closeStaffBtn">&times;</button>
+        </div>
+        <p data-i18n="staffText">Введите код доступа, чтобы открыть служебный раздел.</p>
+        <form id="staffForm" class="checkout-form">
+            <input type="password" id="staffCode" data-i18n-placeholder="staffCodePlaceholder" placeholder="Код доступа" required>
+            <button type="submit" class="btn" data-i18n="staffEnter">Войти</button>
+        </form>
+    </div>
+</div>
+
+<!-- ПОМОЩНИК -->
+<div id="supportModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span data-i18n="supportTitle">Помощник</span>
+            <button type="button" class="modal-close" id="closeSupportBtn">&times;</button>
+        </div>
+        <p data-i18n="supportText">Я помогу выбрать букет, открыть корзину или проверить доставку.</p>
+        <button type="button" class="btn" id="supportCartBtn" data-i18n="openCart">Открыть корзину</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
